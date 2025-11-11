@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trò chơi câu hỏi - Lực lượng sản xuất & Quan hệ sản xuất</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Trang chủ -->
+  <div id="home" class="screen active">
+    <img src="https://i.redd.it/y3dwrt9la5h71.png" alt="Trang chủ" class="home-img" />
+    <h1>Chọn đáp án đúng</h1>
+    <button id="startBtn" class="btn">Bắt đầu</button>
+  </div>
+
+  <!-- Câu hỏi -->
+  <div id="quiz" class="screen">
+    <div id="questionContainer">
+      <h2 id="questionText"></h2>
+      <div id="answerButtons" class="answers"></div>
+      <div id="fillContainer" class="hidden">
+        <p id="fillQuestion"></p>
+      </div>
+    </div>
+    <button id="nextBtn" class="btn hidden">Tiếp theo</button>
+  </div>
+
+  <!-- Kết quả -->
+  <div id="result" class="screen">
+    <h2>Kết quả của bạn</h2>
+    <p id="scoreText"></p>
+    <button id="restartBtn" class="btn">Chơi lại</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

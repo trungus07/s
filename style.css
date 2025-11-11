@@ -1,0 +1,204 @@
+/* ====== Cài đặt chung ====== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #222831);
+  color: #f5f5f5;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.screen {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* ====== Trang chủ ====== */
+.home-img {
+  max-width: 600px;
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.home-img:hover {
+  transform: scale(1.03);
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ====== Nút chung ====== */
+.btn {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  border: none;
+  color: white;
+  padding: 14px 36px;
+  font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 87, 87, 0.2);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 87, 87, 0.3);
+}
+
+/* ====== Phần câu hỏi ====== */
+#questionText {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  max-width: 900px;
+  line-height: 1.5;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* ====== Nút đáp án ====== */
+.answers button {
+  background: #2c2c2c;
+  border: 2px solid #444;
+  color: #fff;
+  padding: 18px;
+  font-size: 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.answers button:hover {
+  background: #3b3b3b;
+  transform: scale(1.02);
+}
+
+/* ====== Màu khi chọn ====== */
+.correct {
+  background-color: #2ecc71 !important;
+  border-color: #2ecc71 !important;
+  color: #fff;
+}
+
+.wrong {
+  background-color: #e74c3c !important;
+  border-color: #e74c3c !important;
+  color: #fff;
+}
+
+/* ====== Điền khuyết ====== */
+#fillQuestion {
+  font-size: 22px;
+  cursor: pointer;
+  border-bottom: 2px dashed #bbb;
+  display: inline-block;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+#fillQuestion:hover {
+  color: #ffb347;
+}
+
+#fillQuestion.revealed {
+  border-bottom: none;
+  color: #2ecc71;
+  cursor: default;
+  font-weight: 600;
+}
+
+/* ====== Phần kết quả ====== */
+#scoreText {
+  font-size: 22px;
+  margin: 10px 0 30px;
+  color: #f1f1f1;
+}
+
+/* ====== Hiệu ứng xuất hiện ====== */
+.screen.active {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ====== Điền khuyết có ô nhập ====== */
+.fill-input {
+  font-size: 18px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid #555;
+  background-color: #2b2b2b;
+  color: #fff;
+  outline: none;
+  margin: 20px 10px;
+  width: 60%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.fill-input:focus {
+  border-color: #ff7b54;
+  background-color: #333;
+}
+
+.fill-input.correct {
+  border-color: #2ecc71;
+  background-color: #264d36;
+}
+
+.fill-input.wrong {
+  border-color: #e74c3c;
+  background-color: #4d2626;
+}
+.end-title {
+  font-size: 72px;
+  color: #ff4f81;
+  text-shadow: 0 0 20px rgba(255, 79, 129, 0.6);
+  margin-bottom: 40px;
+  animation: fadeInScale 1.2s ease;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.btn {
+  margin-top: 20px;
+}
+
+#quiz .btn {
+  margin-top: 40px;
+}
+#nextBtn {
+  margin-top: 40px;
+}
+
